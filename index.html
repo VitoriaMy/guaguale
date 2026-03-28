@@ -3,26 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scratch Ticket</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="manifest" href="manifest.webmanifest">
+    <script src="app.js" defer></script>
+    <title>Scratch Ticket</title>
 </head>
 <body>
     <div class="container">
-        <div class="column" id="scratchCanvas">
-            <!-- Scratch Canvas goes here -->
+        <div class="column">
+            <!-- Content for column 1 -->
         </div>
         <div class="column">
-            <!-- Other content -->
+            <!-- Content for column 2 -->
         </div>
         <div class="column">
-            <!-- Additional content -->
+            <!-- Content for column 3 -->
         </div>
     </div>
-    <script src="app.js"></script>
+    <canvas id="scratchCanvas"></canvas>
     <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('./sw.js');
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('./sw.js');
+            });
         }
     </script>
 </body>
