@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="manifest" href="manifest.webmanifest">
-    <title>Scratch Card PWA</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Your App Title</title>
 </head>
 <body>
-    <canvas id="scratchCanvas" width="300" height="200"></canvas>
-    <script src="app.js"></script>
+    <canvas id="scratchCard" width="300" height="300"></canvas>
+    <script src="sw.js"></script>
 </body>
 </html>
